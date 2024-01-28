@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  oracle:
+    build: .
+    # devices:
+    #   - "/dev/sgx/enclave:/dev/sgx/enclave"
+    #   - "/dev/sgx/enclave:/dev/sgx_enclave"
+    #   - "/dev/sgx_provision:/dev/sgx_provision"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data
+      - ./example/:/app/example/
+    command: /app/example/src/index.js
+
+volumes:
+  mydata:
+    driver: local
