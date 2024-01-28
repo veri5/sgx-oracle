@@ -4,10 +4,10 @@ services:
 
   oracle:
     build: .
-    # devices:
-    #   - "/dev/sgx/enclave:/dev/sgx/enclave"
-    #   - "/dev/sgx/enclave:/dev/sgx_enclave"
-    #   - "/dev/sgx_provision:/dev/sgx_provision"
+    devices:
+      - "/dev/sgx/enclave:/dev/sgx/enclave"
+      - "/dev/sgx/enclave:/dev/sgx_enclave"
+      - "/dev/sgx_provision:/dev/sgx_provision"
     ports:
       - "3000:3000"
     volumes:
