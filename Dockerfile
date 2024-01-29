@@ -1,6 +1,7 @@
 FROM ubuntu:22.04
 
-RUN apt-get install -y --no-install-recommends \
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
   gramine nodejs \
   && rm -rf /var/lib/apt/lists/*
 
