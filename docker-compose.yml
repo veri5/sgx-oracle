@@ -11,7 +11,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./data:/data
+      - ./data/:/data/
       - ./example/:/app/example/
     command: /app/example/src/index.js
 
