@@ -2,7 +2,7 @@ version: '2'
 
 services:
 
-  oracle:
+  sgx-oracle:
     build: .
     devices:
       - "/dev/sgx/enclave:/dev/sgx/enclave"
